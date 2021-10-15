@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"go.opencensus.io/internal/testpb"
+	"github.com/cloudian/opencensus-go/internal/testpb"
 	"go.opencensus.io/stats/view"
 )
 

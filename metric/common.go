@@ -18,7 +18,7 @@ import (
 	"sync"
 	"time"
 
-	"go.opencensus.io/internal/tagencoding"
+	"github.com/cloudian/opencensus-go/internal/tagencoding"
 
 	"go.opencensus.io/metric/metricdata"
 )

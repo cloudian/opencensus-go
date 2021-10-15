@@ -1,4 +1,4 @@
-module go.opencensus.io
+module github.com/cloudian/opencensus-go
 
 require (
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
@@ -13,6 +13,7 @@ require (
 require (
 	github.com/davecgh/go-spew v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	go.opencensus.io v0.23.0
 	golang.org/x/text v0.3.6 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect

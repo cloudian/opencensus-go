@@ -19,7 +19,7 @@ import (
 	"sort"
 	"time"
 
-	"go.opencensus.io/internal/tagencoding"
+	"github.com/cloudian/opencensus-go/internal/tagencoding"
 	"go.opencensus.io/tag"
 )
 

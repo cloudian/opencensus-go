@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"testing"
 
-	"go.opencensus.io/internal/testpb"
+	"github.com/cloudian/opencensus-go/internal/testpb"
 	"go.opencensus.io/plugin/ocgrpc"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
