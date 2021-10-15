@@ -18,8 +18,8 @@ package stats
 import (
 	"context"
 
+	"github.com/cloudian/opencensus-go/stats/internal"
 	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/stats/internal"
 	"go.opencensus.io/tag"
 )
 

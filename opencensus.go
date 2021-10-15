@@ -17,5 +17,5 @@ package opencensus // import "go.opencensus.io"
 
 // Version is the current release version of OpenCensus in use.
 func Version() string {
-	return "0.25.0"
+	return "0.27.0"
 }
