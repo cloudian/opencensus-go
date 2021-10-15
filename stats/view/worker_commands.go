@@ -21,8 +21,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/cloudian/opencensus-go/stats/internal"
 	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/internal"
 	"go.opencensus.io/tag"
 )
 
