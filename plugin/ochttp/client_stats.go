@@ -18,6 +18,7 @@ import (
 	"context"
 	"io"
 	"net/http"
+	"net/http/httptrace"
 	"strconv"
 	"sync"
 	"time"
@@ -40,11 +41,17 @@ func (t statsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 		tag.Upsert(Path, req.URL.Path),
 		tag.Upsert(KeyClientMethod, req.Method),
 		tag.Upsert(Method, req.Method))
-	req = req.WithContext(ctx)
 	track := &tracker{
 		start: time.Now(),
 		ctx:   ctx,
 	}
+	//Create HttpTrace
+	trace := &httptrace.ClientTrace{
+		GotFirstResponseByte: track.GotFirstResponseByte,
+		WroteRequest:         track.WroteRequest,
+	}
+	req = req.WithContext(httptrace.WithClientTrace(ctx, trace))
+
 	if req.Body == nil {
 		// TODO: Handle cases where ContentLength is not set.
 		track.reqSize = -1
@@ -89,7 +96,9 @@ type tracker struct {
 	respSize          int64
 	respContentLength int64
 	reqSize           int64
+	timeToFirstByte   float64
 	start             time.Time
+	reqWrote          time.Time
 	body              io.ReadCloser
 	statusCode        int
 	endOnce           sync.Once
@@ -110,6 +119,7 @@ func (t *tracker) end() {
 			ClientRoundtripLatency.M(latencyMs),
 			ClientLatency.M(latencyMs),
 			ClientResponseBytes.M(t.respSize),
+			ClientGotFirstByteLatency.M(t.timeToFirstByte),
 		}
 		if t.reqSize >= 0 {
 			m = append(m, ClientRequestBytes.M(t.reqSize))
@@ -140,4 +150,16 @@ func (t *tracker) Close() error {
 	// span status but didn't end the span.
 	t.end()
 	return t.body.Close()
+}
+
+// GotFirstResponseByte is called when the first byte of the response headers is available.
+func (t *tracker) GotFirstResponseByte() {
+	t.timeToFirstByte = float64(time.Since(t.reqWrote)) / float64(time.Millisecond)
+}
+
+// WroteRequest is called when the first byte of the response headers is available.
+func (t *tracker) WroteRequest(wroteRequest httptrace.WroteRequestInfo) {
+	if wroteRequest.Err == nil {
+		t.reqWrote = time.Now()
+	}
 }

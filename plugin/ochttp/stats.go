@@ -61,6 +61,11 @@ var (
 		"Time between first byte of request headers sent to last byte of response received, or terminal error",
 		stats.UnitMilliseconds,
 	)
+	ClientGotFirstByteLatency = stats.Float64(
+		"opencensus.io/http/client/got_first_byte_latency",
+		"Time between first byte of request headers sent to first byte of response received, or terminal error",
+		stats.UnitMilliseconds,
+	)
 )
 
 // The following server HTTP measures are supported for use in custom views:
@@ -156,6 +161,14 @@ var (
 		Measure:     ClientRoundtripLatency,
 		Aggregation: DefaultLatencyDistribution,
 		Description: "End-to-end latency, by HTTP method and response status",
+		TagKeys:     []tag.Key{KeyClientMethod, KeyClientStatus},
+	}
+
+	ClientGotFirstByteLatencyDistribution = &view.View{
+		Name:        "opencensus.io/http/client/got_first_byte_latency",
+		Measure:     ClientGotFirstByteLatency,
+		Aggregation: DefaultLatencyDistribution,
+		Description: "Time to First Byte latency, by HTTP method and response status",
 		TagKeys:     []tag.Key{KeyClientMethod, KeyClientStatus},
 	}
 
