@@ -19,7 +19,7 @@ import (
 	"math"
 	"time"
 
-	"go.opencensus.io/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 )
 
 // AggregationData represents an aggregated value from a collection.

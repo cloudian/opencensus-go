@@ -18,16 +18,16 @@ import (
 	"log"
 	"net/http"
 
-	"go.opencensus.io/plugin/ochttp"
-	"go.opencensus.io/plugin/ochttp/propagation/b3"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/plugin/ochttp"
+	"github.com/cloudian/opencensus-go/plugin/ochttp/propagation/b3"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 func ExampleTransport() {
 	// import (
-	// 		"go.opencensus.io/plugin/ochttp"
-	//		"go.opencensus.io/stats/view"
+	// 		"github.com/cloudian/opencensus-go/plugin/ochttp"
+	//		"github.com/cloudian/opencensus-go/stats/view"
 	// )
 
 	if err := view.Register(
@@ -57,7 +57,7 @@ func ExampleTransport() {
 var usersHandler http.Handler
 
 func ExampleHandler() {
-	// import "go.opencensus.io/plugin/ochttp"
+	// import "github.com/cloudian/opencensus-go/plugin/ochttp"
 
 	http.Handle("/users", ochttp.WithRouteTag(usersHandler, "/users"))
 
@@ -66,7 +66,7 @@ func ExampleHandler() {
 }
 
 func ExampleHandler_mux() {
-	// import "go.opencensus.io/plugin/ochttp"
+	// import "github.com/cloudian/opencensus-go/plugin/ochttp"
 
 	mux := http.NewServeMux()
 	mux.Handle("/users", ochttp.WithRouteTag(usersHandler, "/users"))

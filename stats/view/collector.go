@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/cloudian/opencensus-go/internal/tagencoding"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 type collector struct {

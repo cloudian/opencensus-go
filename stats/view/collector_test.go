@@ -18,7 +18,7 @@ import (
 	"context"
 	"testing"
 
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 func TestEncodeDecodeTags(t *testing.T) {

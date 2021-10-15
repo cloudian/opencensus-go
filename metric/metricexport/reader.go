@@ -21,9 +21,9 @@ import (
 	"sync"
 	"time"
 
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/metric/metricproducer"
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricproducer"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 var (

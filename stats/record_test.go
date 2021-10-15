@@ -24,11 +24,11 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 var (

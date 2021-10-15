@@ -11,7 +11,7 @@ It has these top-level messages:
 	HelloRequest
 	HelloReply
 */
-package helloworld // import "go.opencensus.io/examples/grpc/proto"
+package helloworld // import "github.com/cloudian/opencensus-go/examples/grpc/proto"
 
 import (
 	fmt "fmt"

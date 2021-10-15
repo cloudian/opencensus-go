@@ -13,14 +13,14 @@
 // limitations under the License.
 
 // Package readme generates the README.
-package readme // import "go.opencensus.io/internal/readme"
+package readme // import "github.com/cloudian/opencensus-go/internal/readme"
 
 import (
 	"context"
 	"log"
 
-	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/view"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/stats/view"
 )
 
 // README.md is generated with the examples here by using embedmd.

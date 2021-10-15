@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package exporter // import "go.opencensus.io/examples/exporter"
+package exporter // import "github.com/cloudian/opencensus-go/examples/exporter"
 
 import (
 	"encoding/hex"
@@ -20,8 +20,8 @@ import (
 	"regexp"
 	"time"
 
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 // indent these many spaces

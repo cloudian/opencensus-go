@@ -19,7 +19,7 @@ import (
 	"context"
 	"time"
 
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/tag"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/grpc/stats"
 )

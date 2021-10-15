@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"go.opencensus.io/metric"
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/metric/metricexport"
-	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/metric"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricexport"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 var (

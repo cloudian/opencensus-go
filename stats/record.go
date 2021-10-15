@@ -18,9 +18,9 @@ package stats
 import (
 	"context"
 
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 	"github.com/cloudian/opencensus-go/stats/internal"
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 func init() {

@@ -28,11 +28,11 @@ import (
 
 	"net/http"
 
-	"go.opencensus.io/examples/exporter"
-	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
-	"go.opencensus.io/zpages"
+	"github.com/cloudian/opencensus-go/examples/exporter"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
+	"github.com/cloudian/opencensus-go/zpages"
 )
 
 const (

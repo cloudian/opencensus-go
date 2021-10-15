@@ -22,7 +22,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"go.opencensus.io/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 )
 
 func TestGauge(t *testing.T) {

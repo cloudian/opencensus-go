@@ -22,9 +22,9 @@ import (
 	"testing"
 
 	"github.com/cloudian/opencensus-go/internal/testpb"
-	"go.opencensus.io/plugin/ocgrpc"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/plugin/ocgrpc"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 var keyAccountId = tag.MustNewKey("account_id")

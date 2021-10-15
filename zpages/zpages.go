@@ -28,14 +28,14 @@
 // and stats will be collected in-process. In most cases, we expect this
 // overhead will not be significant but it depends on many factors, including
 // how many spans your process creates and how richly annotated they are.
-package zpages // import "go.opencensus.io/zpages"
+package zpages // import "github.com/cloudian/opencensus-go/zpages"
 
 import (
 	"net/http"
 	"path"
 	"sync"
 
-	"go.opencensus.io/internal"
+	"github.com/cloudian/opencensus-go/internal"
 )
 
 // TODO(ramonza): Remove Handler to make initialization lazy.

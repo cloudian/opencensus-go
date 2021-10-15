@@ -15,7 +15,7 @@
 package internal
 
 import (
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 // DefaultRecorder will be called for each Record call.

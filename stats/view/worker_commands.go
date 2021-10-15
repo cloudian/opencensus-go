@@ -21,9 +21,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/cloudian/opencensus-go/stats"
 	"github.com/cloudian/opencensus-go/stats/internal"
-	"go.opencensus.io/stats"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 type command interface {

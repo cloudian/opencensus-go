@@ -23,10 +23,10 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"go.opencensus.io/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 
-	"go.opencensus.io/stats"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 func Test_View_MeasureFloat64_AggregationDistribution(t *testing.T) {

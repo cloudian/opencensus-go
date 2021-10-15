@@ -20,13 +20,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/cloudian/opencensus-go/resource"
 	"github.com/cloudian/opencensus-go/stats/internal"
-	"go.opencensus.io/resource"
 
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/metric/metricproducer"
-	"go.opencensus.io/stats"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricproducer"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 func init() {

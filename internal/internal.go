@@ -12,13 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package internal // import "go.opencensus.io/internal"
+package internal // import "github.com/cloudian/opencensus-go/internal"
 
 import (
 	"fmt"
 	"time"
 
-	opencensus "go.opencensus.io"
+	opencensus "github.com/cloudian/opencensus-go"
 )
 
 // UserAgent is the user agent to be added to the outgoing

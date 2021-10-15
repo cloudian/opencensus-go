@@ -20,7 +20,7 @@ import (
 	"net/http/httptrace"
 	"strings"
 
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 type spanAnnotator struct {

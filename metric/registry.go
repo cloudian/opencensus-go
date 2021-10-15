@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"go.opencensus.io/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 )
 
 // Registry creates and manages a set of gauges and cumulative.

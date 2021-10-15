@@ -22,8 +22,8 @@ import (
 	"sync"
 	"testing"
 
-	"go.opencensus.io/plugin/ochttp"
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/plugin/ochttp"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 func TestSpanAnnotatingClientTrace(t *testing.T) {

@@ -20,7 +20,7 @@ import (
 
 	"github.com/cloudian/opencensus-go/internal/tagencoding"
 
-	"go.opencensus.io/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 )
 
 // baseMetric is common representation for gauge and cumulative metrics.

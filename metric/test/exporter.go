@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/metric/metricexport"
-	"go.opencensus.io/stats/view"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricexport"
+	"github.com/cloudian/opencensus-go/stats/view"
 )
 
 // Exporter keeps exported metric data in memory to aid in testing the instrumentation.

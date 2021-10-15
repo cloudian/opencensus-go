@@ -17,7 +17,7 @@ package metricexport
 import (
 	"context"
 
-	"go.opencensus.io/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
 )
 
 // Exporter is an interface that exporters implement to export the metric data.

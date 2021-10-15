@@ -20,4 +20,4 @@
 //         EnableCPU: true,
 //         EnableMemory: true,
 //     })
-package runmetrics // import "go.opencensus.io/plugin/runmetrics"
+package runmetrics // import "github.com/cloudian/opencensus-go/plugin/runmetrics"

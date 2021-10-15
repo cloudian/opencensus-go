@@ -16,4 +16,4 @@
 //
 // This is an EXPERIMENTAL package, and may change in arbitrary ways without
 // notice.
-package metricexport // import "go.opencensus.io/metric/metricexport"
+package metricexport // import "github.com/cloudian/opencensus-go/metric/metricexport"

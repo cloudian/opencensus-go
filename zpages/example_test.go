@@ -18,7 +18,7 @@ import (
 	"log"
 	"net/http"
 
-	"go.opencensus.io/zpages"
+	"github.com/cloudian/opencensus-go/zpages"
 )
 
 func Example() {

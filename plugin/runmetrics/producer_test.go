@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opencensus.io/metric/metricdata"
-	"go.opencensus.io/metric/metricexport"
-	"go.opencensus.io/metric/metricproducer"
-	"go.opencensus.io/plugin/runmetrics"
+	"github.com/cloudian/opencensus-go/metric/metricdata"
+	"github.com/cloudian/opencensus-go/metric/metricexport"
+	"github.com/cloudian/opencensus-go/metric/metricproducer"
+	"github.com/cloudian/opencensus-go/plugin/runmetrics"
 )
 
 type testExporter struct {

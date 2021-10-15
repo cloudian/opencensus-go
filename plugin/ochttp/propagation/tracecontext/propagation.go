@@ -14,7 +14,7 @@
 
 // Package tracecontext contains HTTP propagator for TraceContext standard.
 // See https://github.com/w3c/distributed-tracing for more information.
-package tracecontext // import "go.opencensus.io/plugin/ochttp/propagation/tracecontext"
+package tracecontext // import "github.com/cloudian/opencensus-go/plugin/ochttp/propagation/tracecontext"
 
 import (
 	"encoding/hex"
@@ -24,9 +24,9 @@ import (
 	"regexp"
 	"strings"
 
-	"go.opencensus.io/trace"
-	"go.opencensus.io/trace/propagation"
-	"go.opencensus.io/trace/tracestate"
+	"github.com/cloudian/opencensus-go/trace"
+	"github.com/cloudian/opencensus-go/trace/propagation"
+	"github.com/cloudian/opencensus-go/trace/tracestate"
 )
 
 const (

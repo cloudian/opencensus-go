@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/cloudian/opencensus-go/internal/testpb"
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 type testExporter struct {

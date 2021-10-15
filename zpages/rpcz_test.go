@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/cloudian/opencensus-go/internal/testpb"
-	"go.opencensus.io/stats/view"
+	"github.com/cloudian/opencensus-go/stats/view"
 )
 
 func TestRpcz(t *testing.T) {

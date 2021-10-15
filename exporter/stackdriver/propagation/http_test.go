@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"testing"
 
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 func TestHTTPFormat(t *testing.T) {

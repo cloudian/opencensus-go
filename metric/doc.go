@@ -16,4 +16,4 @@
 //
 // This is an EXPERIMENTAL package, and may change in arbitrary ways without
 // notice.
-package metric // import "go.opencensus.io/metric"
+package metric // import "github.com/cloudian/opencensus-go/metric"

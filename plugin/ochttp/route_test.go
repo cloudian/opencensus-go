@@ -19,10 +19,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/cloudian/opencensus-go/plugin/ochttp"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
 	"github.com/google/go-cmp/cmp"
-	"go.opencensus.io/plugin/ochttp"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
 )
 
 func TestWithRouteTag(t *testing.T) {

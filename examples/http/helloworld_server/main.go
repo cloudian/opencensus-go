@@ -20,12 +20,12 @@ import (
 	"net/http"
 	"time"
 
-	"go.opencensus.io/zpages"
+	"github.com/cloudian/opencensus-go/zpages"
 
-	"go.opencensus.io/examples/exporter"
-	"go.opencensus.io/plugin/ochttp"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/trace"
+	"github.com/cloudian/opencensus-go/examples/exporter"
+	"github.com/cloudian/opencensus-go/plugin/ochttp"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/trace"
 )
 
 const (

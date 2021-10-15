@@ -19,9 +19,9 @@ import (
 	"strings"
 	"testing"
 
-	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/view"
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/stats/view"
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 func TestClientViews(t *testing.T) {

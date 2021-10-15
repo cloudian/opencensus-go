@@ -18,10 +18,10 @@ import (
 	"context"
 	"testing"
 
-	"go.opencensus.io/stats"
-	"go.opencensus.io/stats/view"
-	_ "go.opencensus.io/stats/view" // enable collection
-	"go.opencensus.io/tag"
+	"github.com/cloudian/opencensus-go/stats"
+	"github.com/cloudian/opencensus-go/stats/view"
+	_ "github.com/cloudian/opencensus-go/stats/view" // enable collection
+	"github.com/cloudian/opencensus-go/tag"
 )
 
 var m = makeMeasure()

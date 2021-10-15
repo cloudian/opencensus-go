@@ -23,8 +23,8 @@ import (
 	"strconv"
 	"time"
 
-	"go.opencensus.io/trace"
-	"go.opencensus.io/zpages/internal"
+	"github.com/cloudian/opencensus-go/trace"
+	"github.com/cloudian/opencensus-go/zpages/internal"
 )
 
 var (
