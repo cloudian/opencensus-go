@@ -48,7 +48,7 @@ func (t statsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 	//Create HttpTrace
 	trace := &httptrace.ClientTrace{
 		GotFirstResponseByte: track.GotFirstResponseByte,
-		WroteRequest:         track.WroteRequest,
+		//WroteRequest:         track.WroteRequest,
 	}
 	req = req.WithContext(httptrace.WithClientTrace(ctx, trace))
 
@@ -98,10 +98,10 @@ type tracker struct {
 	reqSize           int64
 	timeToFirstByte   float64
 	start             time.Time
-	reqWrote          time.Time
-	body              io.ReadCloser
-	statusCode        int
-	endOnce           sync.Once
+	//reqWrote          time.Time
+	body       io.ReadCloser
+	statusCode int
+	endOnce    sync.Once
 }
 
 var _ io.ReadCloser = (*tracker)(nil)
@@ -154,12 +154,12 @@ func (t *tracker) Close() error {
 
 // GotFirstResponseByte is called when the first byte of the response headers is available.
 func (t *tracker) GotFirstResponseByte() {
-	t.timeToFirstByte = float64(time.Since(t.reqWrote)) / float64(time.Millisecond)
+	t.timeToFirstByte = float64(time.Since(t.start)) / float64(time.Millisecond)
 }
 
 // WroteRequest is called when the first byte of the response headers is available.
-func (t *tracker) WroteRequest(wroteRequest httptrace.WroteRequestInfo) {
-	if wroteRequest.Err == nil {
-		t.reqWrote = time.Now()
-	}
-}
+// func (t *tracker) WroteRequest(wroteRequest httptrace.WroteRequestInfo) {
+// 	if wroteRequest.Err == nil {
+// 		t.reqWrote = time.Now()
+// 	}
+// }
