@@ -62,13 +62,13 @@ func NewExporter(o Options) (*Exporter, error) {
 		o.Gatherer = o.Registry
 	}
 
-	collector := newCollector(o, o.Registerer)
 	e := &Exporter{
 		opts:    o,
 		g:       o.Gatherer,
-		c:       collector,
 		handler: promhttp.HandlerFor(o.Gatherer, promhttp.HandlerOpts{}),
 	}
+	collector := newCollector(&e.opts, o.Registerer)
+	e.c = collector
 	collector.ensureRegisteredOnce()
 
 	return e, nil
@@ -114,9 +114,14 @@ func (e *Exporter) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	e.handler.ServeHTTP(w, r)
 }
 
+// SetConstLabel set/updates constant prometheus labels.
+func (e *Exporter) SetConstLabel(name, value string) {
+	e.opts.ConstLabels[name] = value
+}
+
 // collector implements prometheus.Collector
 type collector struct {
-	opts Options
+	opts *Options
 
 	registerOnce sync.Once
 
@@ -141,7 +146,7 @@ func (c *collector) Collect(ch chan<- prometheus.Metric) {
 	c.reader.ReadAndExport(me)
 }
 
-func newCollector(opts Options, registrar prometheus.Registerer) *collector {
+func newCollector(opts *Options, registrar prometheus.Registerer) *collector {
 	return &collector{
 		reg:    registrar,
 		opts:   opts,
